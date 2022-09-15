@@ -1,10 +1,12 @@
-:set mouse=a
 :set termguicolors
-:set relativenumber
-:set nu
-:set smartindent
-:set shiftwidth=4
-
+:set hidden
+:set noerrorbells
+:set noswapfile
+:set nobackup
+:set undodir=~/.vim/undodir
+:set undofile
+:set scrolloff=8
+:set signcolumn=yes
 
 call plug#begin()
 Plug 'vim-airline/vim-airline'
@@ -15,8 +17,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'BurntSushi/ripgrep'
 Plug 'nvim-lua/popup.nvim'
 Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/nvim-lsp-installer'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'sainnhe/gruvbox-material'
 Plug 'sainnhe/everforest'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -26,12 +26,15 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
-
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'L3MON4D3/LuaSnip'
+Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'onsails/lspkind.nvim'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 call plug#end()
 
 lua <<EOF
-    require("user.lsp")
-    require("user.cmp")
+    require("user.init")
 EOF
-:colorscheme gruvbox
-:set completeopt=menu,menuone,noselect
+:highlight Normal guibg=none
+:highlight NonText guibg=none
