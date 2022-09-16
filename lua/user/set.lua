@@ -11,4 +11,16 @@ vim.opt.incsearch = true
 vim.opt.smartindent = true
 vim.opt.wrap = false
 
+vim.opt.termguicolors = true
+vim.opt.hidden = true
+vim.opt.errorbells = false
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = "~/.vim/undodir/"
+vim.opt.scrolloff = 8
+vim.opt.signcolumn = "yes"
+
 vim.cmd[[colorscheme tokyonight]]
+
+vim.cmd[[highlight Normal guibg=none]]
+vim.cmd[[highlight NonText guibg=none]]
