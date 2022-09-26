@@ -19,8 +19,12 @@ vim.opt.backup = false
 vim.opt.undodir = "~/.vim/undodir/"
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
+vim.g.mapleader = ' ' 
+
+
 
 vim.cmd[[colorscheme tokyonight]]
 
 vim.cmd[[highlight Normal guibg=none]]
 vim.cmd[[highlight NonText guibg=none]]
+

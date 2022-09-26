@@ -18,5 +18,16 @@ require("lspconfig").gopls.setup{
 require("lspconfig").html.setup{}
 require("lspconfig").ccls.setup{}
 require("lspconfig").dockerls.setup{}
-require("lspconfig").sqls.setup{}
+require("lspconfig").sqls.setup{
+    settings = {
+        sqls = {
+            connections = {
+                {
+                    driver = 'postgresql',
+                    dataSourceName = 'host=127.0.0.1 port=5432 user=postrgres password=example dbname=parking-service sslmode=disable'
+                }
+            }
+        }
+    }
+}
 
