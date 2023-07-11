@@ -1,3 +1,2 @@
-require("user.init")
-
-
+require("adam")
+print("hello")

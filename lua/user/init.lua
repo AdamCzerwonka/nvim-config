@@ -1,6 +1,0 @@
-require("user.plugin")
-require("user.set")
-require("user.lsp")
-require("user.cmp")
-require("user.treesitter")
-require("user.keymaps")
